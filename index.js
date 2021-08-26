@@ -11,7 +11,7 @@ console.log([1, 2, 3].customMap((x) => x*2)); // [2, 4, 6]
 // Custom filter
 Array.prototype.customFilter = function(callback) {
     const filterArr = [];
-    for(let index = 0; index<this.length; index++) {
+    for(let index = 0; index < this.length; index++) {
         if(!!callback(this[index], index, this)) {
             filterArr.push(this[index]);
         }
