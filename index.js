@@ -46,6 +46,14 @@ const numbers = [1, 2, 3, 4];
 const statment = numbers.customReduce((acc, ele) => acc + ele);
 console.log(statment); // 10
 
+// Custom Bind
+Function.prototype.bind = function(whoIsCallingMe) {
+  const self = this;
+  return function() {
+    return self.apply(whoIsCallingMe, arguments);
+  };
+};
+
 // Custom dedounce
 const customDebounce = (func, delay) => {
     let debounceTimer;
