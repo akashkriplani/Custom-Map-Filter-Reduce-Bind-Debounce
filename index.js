@@ -47,7 +47,7 @@ const statment = numbers.customReduce((acc, ele) => acc + ele);
 console.log(statment); // 10
 
 // Custom Bind
-Function.prototype.bind = function(whoIsCallingMe) {
+Function.prototype.customBind = function(whoIsCallingMe) {
   const self = this;
   return function() {
     return self.apply(whoIsCallingMe, arguments);
